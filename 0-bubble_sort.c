@@ -2,48 +2,29 @@
 #include <stdio.h>
 
 /**
- * bubble_sort - sorts an array in ascending order using bubble sort
+ * bubble_sort - sorts an array in ascending order
  * @array: array of ints to sort
  * @size: size of the array
  */
 void bubble_sort(int *array, size_t size)
 {
-    unsigned int i, j;
-    int tmp;
+	unsigned int i, j;
+	int tmp;
 
-    if (size < 2)
-        return;
+	if (size < 2)
+		return;
 
-    for (i = 0; i < size; i++)
-    {
-        for (j = 0; j < size - i - 1; j++)
-        {
-            if (array[j] > array[j + 1])
-            {
-                tmp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = tmp;
-                print_array(array, size);
-            }
-        }
-    }
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size - i - 1; j++)
+		{
+			if (array[j] > array[j + 1])
+			{
+				tmp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = tmp;
+				print_array(array, size);
+			}
+		}
+	}
 }
-
-/**
- * print_array - prints the elements of an array
- * @array: array of ints to print
- * @size: size of the array
- */
-void print_array(const int *array, size_t size)
-{
-    unsigned int i;
-
-    for (i = 0; i < size; i++)
-    {
-        printf("%d", array[i]);
-        if (i < size - 1)
-            printf(", ");
-    }
-    printf("\n");
-}
-

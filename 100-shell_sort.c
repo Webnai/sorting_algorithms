@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "sort.h"
 
 /**
@@ -35,38 +36,5 @@ void shell_sort(int *array, size_t size)
 
 		/* Decrease the interval */
 		interval /= 3;
-
-		/* Print the array after decreasing the interval */
-		printf("Array after interval %zu: ", interval);
-		for (size_t i = 0; i < size; i++)
-		{
-			printf("%d ", array[i]);
-		}
-		printf("\n");
 	}
 }
-
-int main(void)
-{
-	int array[] = {4, 13, 1, 40, 121, 8, 6};
-	size_t size = sizeof(array) / sizeof(array[0]);
-
-	printf("Original array: ");
-	for (size_t i = 0; i < size; i++)
-	{
-		printf("%d ", array[i]);
-	}
-	printf("\n");
-
-	shell_sort(array, size);
-
-	printf("Sorted array: ");
-	for (size_t i = 0; i < size; i++)
-	{
-		printf("%d ", array[i]);
-	}
-	printf("\n");
-
-	return 0;
-}
-

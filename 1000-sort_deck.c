@@ -139,4 +139,3 @@ void sort_deck(deck_node_t **deck)
 			insertion_sort_deck_kind(deck);
 				insertion_sort_deck_value(deck);
 }
-
